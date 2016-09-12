@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "443171865200",
+    "firebase_url": "https://basic-messenger-671e4.firebaseio.com",
+    "project_id": "basic-messenger-671e4",
+    "storage_bucket": "basic-messenger-671e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443171865200:android:9f20745ab0decea5",
+        "android_client_info": {
+          "package_name": "com.quickenloans.techconference.basicmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443171865200-mo2uinoodk2tdo3bici6cint085av628.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quickenloans.techconference.basicmessenger",
+            "certificate_hash": "6503A660C25BF1ADCFA2A6B2E7B17546766BC54B"
+          }
+        },
+        {
+          "client_id": "443171865200-t9ub75pfflucgn693ihdd3319ej4kh8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8Sco8eGyaEs8HyMHhOpvqq1fgZicPmMI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443171865200-t9ub75pfflucgn693ihdd3319ej4kh8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

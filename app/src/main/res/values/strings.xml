@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Basic Messenger</string>
+    <string name="login">Log In</string>
+    <string name="logout">Log Out</string>
+
+
+    <string name="facebook_app_id">1802396893315694</string>
+
+
+</resources>
