@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-9.4.0_77d19d5c4a37369ecc11d1d100452b9b1160553e.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_2243dbf32db10f76e44a2b9aaa6d292dc036892d.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-9.4.0_faa4d06f021c9ecdc5a7e837728c97f4068e026d.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4348dd26d83b56c2058b768222c3271bce911724">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-9.4.0_0e69e78090d416f2192210c6b492bcf99e3f2bf7.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-9.4.0_fea89107e8940ca7b6f68a8a170443136c6d9e18.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_8ff6ac955ed6453358ca65078b745fa43c037846.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_eb73db30cef97a8ff3008119fe1cd9559bd05831.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.1_2d9a1b9a1162af86738d381f356053a7821520d2.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-module-9.4.0_9967addaa01f37e5fad680392016418d790276c4.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-9.4.0_ae4eb303f2c769146f439a2f4f50ec3f19598cc8.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-9.4.0_d56fe85f088e7100987d908a928e3b5c465ec64e.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_616c5e1f85cf654423bdf67161a1a66f9c19510a.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.4.0_b53d6a57fe925485fb4bbc55cd362cc9d9b5a54e.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/glide-3.6.1_090f17b39565d7fd3966134e03d2a53de9c5de35.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-9.4.0_2bf36e54e2e33fcea080602d917ce2a54b3572ad.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-common-9.4.0_2aec2d82ab2165b8d677f75698ba32669ae00b21.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-database/0.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c76f6507a42aec274953e882bf3c49a570843ef5">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.firebaseui-firebase-ui-database-0.4.0_251f0bff8bdb21f5169f6e402eb72a00b0798f22.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_7c26f29b831515f5d5d56ce404538ba574035ef9.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-9.4.0_46dd73354d0752f24772ff5b9e89e1c0dc914208.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.4.0_54bff41e87e532a05f42800b50ec5e1c4557284b.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-9.4.0_8ac5a482aa0bf9e820cf7bd6ea83cc6dd58cca34.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-1.3.0_56a85055ff245ca42e33fa4c09824c763e67965b.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_f6b151e493ea2548e2be478312861c8c01129b30.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_af872a8087fa7a567d126d3bc560b0066d22e242.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-9.4.0_13ecd1259cf3e830f7f018a249be2cccc7b816db.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-9.4.0_22efa4c84ddfd4e69f046939d4aa1c3517d5533d.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_56d535debdb369873a709629f960e4911f0a8e27.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_25e986e5a1240d016068a5654e7b8f4563a16713.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="86da97c30f50a67ddabe2cf7040713ad17153fce">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.11.0_1286d9a5fdf2e5f470291c4278a394aefbfe9c5a.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-9.4.0_59859be201ce011a1d5ef780d9f42e8066126edb.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0e5a66a941515d873a34065fe44fbba6ef422a1b">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-23.2.1_059c5d244d6f32fa43a6d84cd9f056b819a9abd7.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_d2d4e0aa451476be79bb12a8c2e1519e6c698d6d.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.4.0_aaedd36d33cb8a1ce3b1c005236be76ec5bc44d4.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.4.0_d275c54e22ac929e1bfea226dc9e1b76c4796d86.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_efa8246934620502b0e578dcedaa90a72fc79b90.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-9.4.0_ff6a9cec0f4716e653a5ace3dade481b6e6dd3a2.jar" />
+    </item>
+    <item
+        jar="/Users/dknapp/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/dknapp/Desktop/BasicMessenger/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_985b0b206de3c29eeff7dcf1b7b01079c3939ea3.jar" />
+    </item>
+
+</items>
