@@ -20,6 +20,7 @@
             android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/messengerImageView"
             android:background="@drawable/outgoing_message"
+            android:clickable="false"
             android:minHeight="60dp"
             android:minWidth="60dp"
             android:orientation="vertical">
@@ -29,8 +30,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="0"
                 android:gravity="center_vertical"
+                android:inputType="textMultiLine"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView

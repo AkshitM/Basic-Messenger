@@ -2,9 +2,7 @@ package com.quickenloans.techconference.basicmessenger;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -41,7 +39,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class ActivityLogin extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-    private static final String TAG = "SignInActivity";
+    private static final String TAG = "LogInActivity";
 
     private static final int RC_SIGN_IN = 9001;
 
@@ -66,7 +64,9 @@ public class ActivityLogin extends AppCompatActivity implements
 
         FacebookSdk.sdkInitialize(getApplicationContext());
 
-        setContentView(R.layout.layout_login);
+        setContentView(R.layout.layout_login_final);
+
+        getSupportActionBar().hide();
 
         wrapperLayout = (RelativeLayout) findViewById(R.id.wrapper);
 
@@ -92,14 +92,7 @@ public class ActivityLogin extends AppCompatActivity implements
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton loginButton = (LoginButton) findViewById(R.id.sign_in_button_facebook);
         assert loginButton != null;
-//        loginButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                wrapperLayout.setVisibility(LinearLayout.INVISIBLE);
-//                progressBar.setVisibility(ProgressBar.VISIBLE);
-//
-//            }
-//        });
+
         loginButton.setReadPermissions("email", "public_profile");
         loginButton.setOnClickListener(this);
         loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
@@ -113,13 +106,12 @@ public class ActivityLogin extends AppCompatActivity implements
             public void onCancel() {
                 Log.d(TAG, "facebook:onCancel");
                 wrapperLayout.setVisibility(LinearLayout.VISIBLE);
-                // ...
             }
 
             @Override
             public void onError(FacebookException error) {
                 Log.d(TAG, "facebook:onError", error);
-                // ...
+                wrapperLayout.setVisibility(LinearLayout.VISIBLE);
             }
         });
 
@@ -148,6 +140,7 @@ public class ActivityLogin extends AppCompatActivity implements
         animation.setDuration(1500);
         wrapperLayout.setAnimation(animation);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -209,10 +202,6 @@ public class ActivityLogin extends AppCompatActivity implements
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
-
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
                             Toast.makeText(ActivityLogin.this, "Authentication failed.",
@@ -242,9 +231,6 @@ public class ActivityLogin extends AppCompatActivity implements
                         startActivity(new Intent(ActivityLogin.this, ActivityMain.class));
                         finish();
 
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
                             Toast.makeText(ActivityLogin.this, "Authentication failed.",

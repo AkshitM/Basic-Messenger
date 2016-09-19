@@ -32,50 +32,12 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
 
     private int lastPosition = -1;
 
-    @Override
-    public int getItemViewType(int position) {
-
-        Message message = (Message) getItem(position);
-
-        if (!message.getName().equals(currentUser)) {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-
-    int idDefaultLayout;
-
-    @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        RecyclerView.ViewHolder viewHolder;
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-
-        switch (viewType) {
-            case 0:
-                ViewGroup view = (ViewGroup) LayoutInflater.from(parent.getContext()).inflate(R.layout.message_item_incoming, parent, false);
-                MessageViewHolder constructor = new MessageViewHolder(view);
-                return constructor;
-
-            case 1:
-                ViewGroup view2 = (ViewGroup) LayoutInflater.from(parent.getContext()).inflate(R.layout.message_item_outgoing, parent, false);
-                MessageViewHolder constructor2 = new MessageViewHolder(view2);
-                return constructor2;
-
-            default:
-                return super.onCreateViewHolder(parent, viewType);
-        }
-    }
-
     public CustomRecyclerViewAdapter(Class modelClass, int modelLayout, Class viewHolderClass, DatabaseReference ref, Context context, String currentUser, Listener listener) {
         super(modelClass, modelLayout, viewHolderClass, ref);
 
         this.ref = ref;
         this.context = context;
         this.currentUser = currentUser;
-        this.idDefaultLayout = modelLayout;
-
         this.listener = listener;
 
 
@@ -90,6 +52,37 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
 
             }
         });
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+
+        Message message = (Message) getItem(position);
+
+        if (!message.getName().equals(currentUser)) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        switch (viewType) {
+            case 0:
+                ViewGroup incomingMessageView = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.message_item_incoming, parent, false);
+                MessageViewHolder incomingMessageViewHolder = new MessageViewHolder(incomingMessageView);
+                return incomingMessageViewHolder;
+
+            case 1:
+                ViewGroup outgoingMessageView = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.message_item_outgoing, parent, false);
+                MessageViewHolder outgoingMessageViewHolder = new MessageViewHolder(outgoingMessageView);
+                return outgoingMessageViewHolder;
+
+            default:
+                return super.onCreateViewHolder(parent, viewType);
+        }
     }
 
     @Override
@@ -110,8 +103,6 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
                     .load(currentMessage.getPhotoUrl())
                     .into(viewHolder.messengerImageView);
         }
-
-
 
         listener.initialDataLoaded();
 
@@ -142,14 +133,15 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
 
     private void setAnimation(View viewToAnimate, int position) {
         if (position > lastPosition) {
-//            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+//          Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
             Animation animation = AnimationUtils.loadAnimation(context, R.anim.bounce);
-            animation.setDuration(3000);
+            animation.setDuration(2500);
             viewToAnimate.startAnimation(animation);
             lastPosition = position;
         }
     }
 
+    // Prevent animations from going while user is scrolling
     @Override
     public void onViewDetachedFromWindow(final RecyclerView.ViewHolder holder)
     {

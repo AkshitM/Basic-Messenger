@@ -1,11 +1,43 @@
 <resources>
 
+    <attr
+        name="chat_message_background_incoming">
+    </attr>
+
+    <attr
+        name="chat_message_background_outgoing">
+    </attr>
+
+    <attr
+        name="main_background">
+    </attr>
+
+    <attr
+        name="main_text_color">
+    </attr>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="chat_message_background_incoming">@color/chat_message_background_incoming</item>
+        <item name="chat_message_background_outgoing">@color/chat_message_background_outgoing</item>
+        <item name="main_text_color">@color/black</item>
+        <item name="main_background">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary_DarkTheme</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_DarkTheme</item>
+        <item name="colorAccent">@color/colorAccent_DarkTheme</item>
+        <item name="chat_message_background_incoming">@color/chat_message_background_incoming_DarkTheme</item>
+        <item name="chat_message_background_outgoing">@color/chat_message_background_outgoing_DarkTheme</item>
+        <item name="main_background">@color/black</item>
+        <item name="main_text_color">@color/golden</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
 

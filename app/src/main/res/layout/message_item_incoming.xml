@@ -25,6 +25,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:background="@drawable/incoming_message"
+            android:clickable="false"
             android:gravity="center_vertical"
             android:minHeight="60dp"
             android:minWidth="60dp"
@@ -35,8 +36,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="0"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:inputType="textMultiLine"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
 
             <TextView
                 android:id="@+id/messengerTextView"

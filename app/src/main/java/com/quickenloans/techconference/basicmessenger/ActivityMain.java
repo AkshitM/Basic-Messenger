@@ -53,11 +53,9 @@ public class ActivityMain extends AppCompatActivity
     }
 
     private static final String TAG = "MainActivity";
-    public static final String MESSAGES_CHILD = "messages";
-    private static final int REQUEST_INVITE = 1;
-    public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
+    public static final String DATABASE_REFERENCE_MESSAGES = "messages";
+    public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
     public static final String ANONYMOUS = "anonymous";
-    private static final String MESSAGE_SENT_EVENT = "message_sent";
     private String mUsername;
     private String mPhotoUrl;
     private SharedPreferences mSharedPreferences;
@@ -78,12 +76,19 @@ public class ActivityMain extends AppCompatActivity
             mFirebaseAdapter;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(this);
         setContentView(R.layout.activity_main);
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        if (mSharedPreferences.getBoolean(Constants.PREF_DARK_THEME, false)) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         // Set default username is anonymous.
         mUsername = ANONYMOUS;
 
@@ -110,14 +115,17 @@ public class ActivityMain extends AppCompatActivity
         // Initialize ProgressBar and RecyclerView.
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mMessageRecyclerView = (RecyclerView) findViewById(R.id.messageRecyclerView);
+
         mLinearLayoutManager = new LinearLayoutManager(this);
+        // start populating data at bottom of layout
+
         mLinearLayoutManager.setStackFromEnd(true);
         mMessageRecyclerView.setLayoutManager(mLinearLayoutManager);
 
 // New child entries
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
-        mFirebaseAdapter = new CustomRecyclerViewAdapter(Message.class, R.layout.message_item_incoming, CustomRecyclerViewAdapter.MessageViewHolder.class, mFirebaseDatabaseReference.child(MESSAGES_CHILD), this, mUsername, this);
+        mFirebaseAdapter = new CustomRecyclerViewAdapter(Message.class, R.layout.message_item_incoming, CustomRecyclerViewAdapter.MessageViewHolder.class, mFirebaseDatabaseReference.child(DATABASE_REFERENCE_MESSAGES), this, mUsername, this);
 
         mFirebaseAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
@@ -141,7 +149,7 @@ public class ActivityMain extends AppCompatActivity
         mMessageRecyclerView.setAdapter(mFirebaseAdapter);
         mMessageEditText = (EditText) findViewById(R.id.messageEditText);
         mMessageEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(mSharedPreferences
-                .getInt(Constants.FRIENDLY_MSG_LENGTH, DEFAULT_MSG_LENGTH_LIMIT))});
+                .getInt(Constants.DEFAULT_MESSAGE_LENGTH, DEFAULT_MSG_LENGTH_LIMIT))});
         mMessageEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -165,37 +173,15 @@ public class ActivityMain extends AppCompatActivity
         mSendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Message friendlyMessage = new
+                Message message = new
                         Message(mMessageEditText.getText().toString(),
                         mUsername,
                         mPhotoUrl);
-                mFirebaseDatabaseReference.child(MESSAGES_CHILD)
-                        .push().setValue(friendlyMessage);
+                mFirebaseDatabaseReference.child(DATABASE_REFERENCE_MESSAGES)
+                        .push().setValue(message);
                 mMessageEditText.setText("");
             }
         });
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in.
-        // TODO: Add code to check if user is signed in.
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
     }
 
     @Override
@@ -208,6 +194,9 @@ public class ActivityMain extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.settings_menu:
+                startActivity(new Intent(this, ActivitySettings.class));
+                return true;
             case R.id.sign_out_menu:
                 mFirebaseAuth.signOut();
                 mUsername = ANONYMOUS;
@@ -222,8 +211,6 @@ public class ActivityMain extends AppCompatActivity
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        // An unresolvable error has occurred and Google APIs (including Sign-In) will not
-        // be available.
         Log.d(TAG, "onConnectionFailed:" + connectionResult);
         Toast.makeText(this, "Google Play Services error.", Toast.LENGTH_SHORT).show();
     }
