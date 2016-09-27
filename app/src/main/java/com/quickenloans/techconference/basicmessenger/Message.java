@@ -2,15 +2,16 @@ package com.quickenloans.techconference.basicmessenger;
 
 import java.io.Serializable;
 
-public class Message implements Serializable {
+ class Message implements Serializable {
     private String text;
     private String name;
     private String photoUrl;
 
-    public Message() {
-    }
+     Message() {
 
-    public Message(String text, String name, String photoUrl) {
+     }
+
+     Message(String text, String name, String photoUrl) {
         this.text = text;
         this.name = name;
         this.photoUrl = photoUrl;
@@ -36,7 +37,7 @@ public class Message implements Serializable {
         return photoUrl;
     }
 
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
 }
+
+
+

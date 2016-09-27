@@ -9,21 +9,14 @@
     <color name="chat_message_background_incoming">#FFEB3B</color>
     <color name="chat_message_background_outgoing">#42A5F5</color>
 
-    <!-- Dark Theme -->
-    <color name="colorPrimary_DarkTheme">#1a237e</color>
-    <color name="colorPrimaryDark_DarkTheme">#212121</color>
-    <color name="colorAccent_DarkTheme">#4a148c</color>
 
-    <color name="chat_message_background_incoming_DarkTheme">#b71c1c</color>
-    <color name="chat_message_background_outgoing_DarkTheme">#1b5e20</color>
+    <color name="blue">#041E42</color>
 
-
+    <color name="maize">#FFC72C</color>
 
     <color name="golden">#cddc39</color>
     <color name="light_grey">#e0e0e0</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
 
-
-    <color name="login_background">#00b8d4</color>
 </resources>

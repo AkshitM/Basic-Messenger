@@ -22,47 +22,35 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
 
-    Context context;
+    private Context context;
 
-    String currentUser;
+    private String currentUser;
 
-    DatabaseReference ref;
-
-    Listener listener;
+    private Listener listener;
 
     private int lastPosition = -1;
+
+    private static final int VIEW_TYPE_INCOMING_MESSAGE = 0;
+    private static final int VIEW_TYPE_OUTGOING_MESSAGE = 1;
+
 
     public CustomRecyclerViewAdapter(Class modelClass, int modelLayout, Class viewHolderClass, DatabaseReference ref, Context context, String currentUser, Listener listener) {
         super(modelClass, modelLayout, viewHolderClass, ref);
 
-        this.ref = ref;
         this.context = context;
         this.currentUser = currentUser;
         this.listener = listener;
-
-
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                System.out.println(snapshot.getValue());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
     }
 
     @Override
     public int getItemViewType(int position) {
 
-        Message message = (Message) getItem(position);
+        Message currentMessage = (Message) getItem(position);
 
-        if (!message.getName().equals(currentUser)) {
-            return 0;
+        if (!currentMessage.getName().equals(currentUser)) {
+            return VIEW_TYPE_INCOMING_MESSAGE;
         } else {
-            return 1;
+            return VIEW_TYPE_OUTGOING_MESSAGE;
         }
     }
 
@@ -70,12 +58,12 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         switch (viewType) {
-            case 0:
+            case VIEW_TYPE_INCOMING_MESSAGE:
                 ViewGroup incomingMessageView = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.message_item_incoming, parent, false);
                 MessageViewHolder incomingMessageViewHolder = new MessageViewHolder(incomingMessageView);
                 return incomingMessageViewHolder;
 
-            case 1:
+            case VIEW_TYPE_OUTGOING_MESSAGE:
                 ViewGroup outgoingMessageView = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.message_item_outgoing, parent, false);
                 MessageViewHolder outgoingMessageViewHolder = new MessageViewHolder(outgoingMessageView);
                 return outgoingMessageViewHolder;
@@ -86,10 +74,10 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
     }
 
     @Override
-    protected void populateViewHolder(RecyclerView.ViewHolder baseViewHolder, Object model, int position) {
+    protected void populateViewHolder(RecyclerView.ViewHolder baseViewHolder, Object messageObject, int position) {
         MessageViewHolder viewHolder = (MessageViewHolder) baseViewHolder;
 
-        Message currentMessage = (Message) model;
+        Message currentMessage = (Message) messageObject;
 
         viewHolder.messageTextView.setText(currentMessage.getText());
         viewHolder.messengerTextView.setText(currentMessage.getName());
@@ -124,8 +112,7 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
             messengerImageView = (CircleImageView) itemView.findViewById(R.id.messengerImageView);
         }
 
-        public void clearAnimation()
-        {
+        public void clearAnimation() {
             wrapperLayout.clearAnimation();
         }
 
@@ -133,7 +120,6 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
 
     private void setAnimation(View viewToAnimate, int position) {
         if (position > lastPosition) {
-//          Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
             Animation animation = AnimationUtils.loadAnimation(context, R.anim.bounce);
             animation.setDuration(2500);
             viewToAnimate.startAnimation(animation);
@@ -143,9 +129,8 @@ public class CustomRecyclerViewAdapter extends FirebaseRecyclerAdapter {
 
     // Prevent animations from going while user is scrolling
     @Override
-    public void onViewDetachedFromWindow(final RecyclerView.ViewHolder holder)
-    {
-        ((MessageViewHolder)holder).clearAnimation();
+    public void onViewDetachedFromWindow(final RecyclerView.ViewHolder holder) {
+        ((MessageViewHolder) holder).clearAnimation();
     }
 
 
